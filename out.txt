@@ -1,0 +1,38 @@
+# This document was created by PyBEL v0.15.5 and bel-resources v0.0.3 on Sat Nov 16 15:18:29 2024
+
+################################################################################
+#| Metadata
+################################################################################
+
+SET DOCUMENT Name = "indra"
+SET DOCUMENT Version = "a4c9e447-ef2a-4285-aa41-28cde73cfdcc"
+
+################################################################################
+#| Namespaces
+################################################################################
+
+# Enumerated Namespaces
+# ---------------------
+DEFINE NAMESPACE CHEBI AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/chebi-ids/chebi-ids-20170725.belns"
+DEFINE NAMESPACE FPLX AS URL "https://raw.githubusercontent.com/sorgerlab/famplex/5f5b573fe26d7405dbccb711ae8e5697b6a3ec7e/export/famplex.belns"
+DEFINE NAMESPACE GO AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/go/go-20180109.belns"
+DEFINE NAMESPACE HGNC AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/hgnc-human-genes/hgnc-human-genes-20170725.belns"
+DEFINE NAMESPACE IP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/interpro/interpro-20170731.belns"
+DEFINE NAMESPACE MESH AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/mesh-processes/mesh-processes-20170725.belns"
+DEFINE NAMESPACE UP AS URL "https://arty.scai.fraunhofer.de/artifactory/bel/namespace/swissprot/swissprot-20170725.belns"
+
+# Regular Expression Namespaces
+# -----------------------------
+DEFINE NAMESPACE PUBCHEM AS PATTERN "\d+"
+
+
+################################################################################
+#| Statements
+################################################################################
+###############################################
+
+SET Citation = {"pubmed", "29048466"}
+SET SupportingText = "Automatically added by PyBEL"
+p(HGNC:6871 ! MAPK1) hasVariant p(HGNC:6871 ! MAPK1, pmod(go:0006468 ! "protein phosphorylation", Thr, 185))
+UNSET SupportingText
+UNSET Citation
